@@ -42,13 +42,13 @@ const userSchema = mongoose.Schema(
     },
     userImage: String,
     userShortBio: String,
-    arte: [{ type: Schema.Types.ObjectId, ref: "Arte" }], //<--- Tiene el ID de cada Artesania que crea / one-to-many/ SchemaType is then a configuration object for an individual property.
+    arte: [{ type: mongoose.Schema.Types.ObjectId, ref: "Arte" }], //<--- Tiene el ID de cada Artesania que crea / one-to-many/ SchemaType is then a configuration object for an individual property.
   },
   { timestamps: true }
 );
 
 // Model
-const User = model("User", userSchema);
+const User = mongoose.model("User", userSchema);
 
 // Export
 module.exports = User;

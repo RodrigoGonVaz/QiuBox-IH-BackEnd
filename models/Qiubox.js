@@ -26,7 +26,7 @@ const qiuboxSchema = mongoose.Schema(
 );
 
 // Model
-const Qiubox = model("Qiubox", qiuboxSchema);
+const Qiubox = mongoose.model("Qiubox", qiuboxSchema);
 
 // Export
 module.exports = Qiubox;

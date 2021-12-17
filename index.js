@@ -22,7 +22,7 @@ app.use(express.json())
 
 
 //3. Rutas
-//app.use("/guitars", require("./routes/guitars"))
+app.use("/artesanias", require("./routes/artesanias.Routes"))
 //app.use("/stores", require("./routes/stores.Routes"))
 
 //app.use("/users", require("./routes/users.Routes"))

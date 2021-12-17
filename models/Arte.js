@@ -10,8 +10,9 @@ const arteSchema = mongoose.Schema(
       required: [true, "Titulo del producto es requerido 🎨 "],
     },
     arteUsername: {
-      type: Schema.Types.ObjectId,
+      type: mongoose.Schema.Types.ObjectId,
       ref: "User", //<---- one-to-one,
+      // required: [true, "Usuario del producto es requerido 🎨 "],
     },
     artePrice: {
       type: Number,
@@ -28,18 +29,19 @@ const arteSchema = mongoose.Schema(
     arteHashTag: {
       type: [String],
     },
-    arteFav: {
-        type: [Number],
-    },
+    arteFav:[{ 
+      type: mongoose.Schema.Types.ObjectId, 
+      ref: "User" 
+    }],
     arteStock: {
-        type: [Number],
+        type: Number,
     },
   },
   { timestamps: true }
 );
 
 // Model
-const Arte = model("Arte", arteSchema);
+const Arte = mongoose.model("Arte", arteSchema);
 
 // Export
 module.exports = Arte;
