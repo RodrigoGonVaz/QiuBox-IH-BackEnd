@@ -5,9 +5,9 @@ const mongoose          =require("mongoose")
 //2.Schema
 const userSchema = mongoose.Schema(
   {
-    name: {
+    nombre: {
         type: String,
-        required: [true, "Name is required ☠️ "],
+        required: [true, "Nombre es requerido ☠️ "],
     },
     apellido:{
         type: String,
@@ -20,21 +20,20 @@ const userSchema = mongoose.Schema(
     userName: {
       type: String,
       trim: true,
-      required: [true, "User name is required 🚨 "],
+      required: [true, "Nombre de usuario es requerido 🚨 "],
     },
-    userEmail: {
+    email: {
       type: String,
       unique: true,
       lowercase: true,
       trim: true,
-      match: [/^\S+@\S+\.\S+$/, "Use a valid email 🧬 "],
+      match: [/^\S+@\S+\.\S+$/, "Use un email valido 🧬 "],
     },
     telefono:{
-        type: Number,
+        type: String,
+        match: [/^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/, "Use un telefono valido 📱"],
         unique: true,
         default: "",
-        min: 10, 
-        max: 10
     },
     password: {
       type: String,
