@@ -64,10 +64,7 @@ exports.create = async (req, res) => {
 				})
             }
         )
-        //Crear en post man un test de que se crea
-        // res.json({
-        //     data: newUser
-        // })
+        
 
     } catch (error) {
         //En caso de error con await
@@ -75,6 +72,7 @@ exports.create = async (req, res) => {
             msg: "Hubo un error en la creacion de usuarios 💀",
             error
         })
+        console.log(error)
     }
 }
 
