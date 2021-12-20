@@ -41,6 +41,7 @@ exports.create = async (req,res) =>{
             msg: "Hubo un error creando la Artesania 💀",
             error
         })
+        console.log(error)
      }
 
 }
@@ -131,6 +132,7 @@ exports.edit = async (req, res) => {
 			msg: "Hubo un error obteniendo los datos. 💀",
 			error: error
 		})
+        
      }
 }
 
