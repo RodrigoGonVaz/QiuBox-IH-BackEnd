@@ -11,15 +11,21 @@ const qiuboxSchema = mongoose.Schema(
     },
     qiuboxPrice: {
         type: Number,
-        required: [true, "Precio es requerido 💸 ."],
+    },
+    precioID: {
+      type: String,
+      required: true
+    },
+    productoID: {
+      type: String,
+      required: true
     },
     qiuboxImage: String,
     shortDescription: String,
     arte: [{ 
-        type: Schema.Types.ObjectId, 
+        type: mongoose.Schema.Types.ObjectId, 
         ref: "Arte",
         maxlength: 6,
-        minlength: 5
     }], //<--- Tiene el ID de cada Artesania que crea / one-to-many/ SchemaType is then a configuration object for an individual property.
   },
   { timestamps: true }
@@ -30,3 +36,12 @@ const Qiubox = mongoose.model("Qiubox", qiuboxSchema);
 
 // Export
 module.exports = Qiubox;
+
+
+/*
+    "nombre": "Lentes para sol",
+    "color": "rojos",
+    "descripcion": "Muy grandes",
+    "img": "https://images.unsplash.com/photo-1582143434535-eba55a806718?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    "precio": 9200
+*/
