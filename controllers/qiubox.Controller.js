@@ -54,7 +54,7 @@ exports.create = async (req,res) =>{
 		qiuboxTitulo: newProductStripeQiuboxTitulo,
 		arte: newProductStripeMetadataArte,
         qiuboxPrice: newProductStripeMetadataQiuboxPrice,
-		descripcion: newProductStripeDescription,
+		shortDescription: newProductStripeDescription,
 		precioID: newProductPriceID,
 		productoID: newProductStripeID,
 		qiuboxImage
