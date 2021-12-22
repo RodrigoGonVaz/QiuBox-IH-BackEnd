@@ -28,6 +28,7 @@ const userSchema = mongoose.Schema(
       lowercase: true,
       trim: true,
       match: [/^\S+@\S+\.\S+$/, "Use un email valido 🧬 "],
+      required: [true, "Nombre de usuario es requerido 🚨 "]
     },
     telefono:{
         type: String,
@@ -39,7 +40,10 @@ const userSchema = mongoose.Schema(
       type: String,
       required: [true, "Password is required 📢 ."],
     },
-    userImage: String,
+    userImage: {
+      type: String,
+      trim: true,
+    },
     userShortBio: String,
     arte: [{ type: mongoose.Schema.Types.ObjectId, ref: "Arte" }], //<--- Tiene el ID de cada Artesania que crea / one-to-many/ SchemaType is then a configuration object for an individual property.
   },

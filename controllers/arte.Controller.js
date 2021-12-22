@@ -1,5 +1,6 @@
 //Import
 const Arte = require("./../models/Arte")
+const User = require("./../models/User")
 
 
 //---------------------CREAR ARTESANIA------------------//

@@ -25,7 +25,7 @@ const decrypt = async(req,res,next) =>{
 
 	} catch (error) {
 		
-		console.log(error)
+		console.log("Oh no",error)
 
 		res.json(
 			{

@@ -8,7 +8,7 @@ const authorization   =require("./../middlewares/authorization")
 
 // 2. ROUTER
 // CREAR USUARIO
-router.post("/crear", userController.create)
+router.post("/registro", userController.create)
 
 // INICIAR SESIÓN DE USUARIO
 router.post("/iniciar-sesion", userController.login)
